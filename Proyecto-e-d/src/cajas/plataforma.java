@@ -7,8 +7,19 @@ package cajas;
 
 /**
  *
- * @author Andrey B
+ * @author Jeycon
  */
-public class plataforma {
-    
+public class plataforma extends cajaMadre{
+
+    public plataforma(int tiempo) {
+        super(tiempo);
+    }
+
+    @Override
+    public String Caja(String tiquete, int tiempo) {
+        this.tiempo = tiempo;
+        String Caja;
+        Caja =( tiquete + tiempo);
+        return Caja;
+    }
 }

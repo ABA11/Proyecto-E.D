@@ -5,10 +5,23 @@
  */
 package cajas;
 
+import java.util.LinkedList;
+
 /**
  *
- * @author Andrey B
+ * @author Jeycon
  */
-public class caja_2 {
-    
+public class caja_2 extends cajaMadre{
+
+    public caja_2(int tiempo) {
+        super(tiempo);
+    }
+
+    @Override
+    public String Caja(String tiquete, int tiempo) {
+        this.tiempo = tiempo;
+        String Caja;
+        Caja =( tiquete + tiempo);
+        return Caja;
+    }
 }
