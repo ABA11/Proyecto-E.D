@@ -34,8 +34,8 @@ public class logica {
         return tiquetes;
     }
     //
-    public void puta(){                   
-        while(fila.size() < 25 && contador < 200){
+    public void puta(int time){                   
+        while(fila.size() < 25 && contador < time){
             tp1 += (tiempo1 = tiempos());
             tp2 += (tiempo2 = tiempos());
             tp3 += (tiempo3 = tiempos());
@@ -62,11 +62,21 @@ public class logica {
         }
     }
     //
+    public int totalP(){
+        int total = caja1.size() + caja2.size() + caja3.size() + caja4.size()
+                +caja5.size() + plataforma.size() + fila.size();
+        return total;
+    }
+    //
+    public int totalAt(){
+        int totalAt = caja1.size() + caja2.size() + caja3.size() + caja4.size()
+                +caja5.size() + plataforma.size();
+        return totalAt;
+    }
+    //
     public int tiempos(){
-        int tiempos = 0;
-        while((tiempos != 30) && (tiempos != 5)){
-             tiempos = ((int) (Math.random()*31+4));
-        } 
+        int tiempos = 0;      
+        tiempos = ((int) (Math.random()*25+4));        
         return tiempos;
     }
      //
