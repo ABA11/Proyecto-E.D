@@ -19,10 +19,14 @@ public class logica {
     private static int a,b,c,d,e,f;
     private int[] ntiquetes = {a,b,c,d,e,f};   
     private int contador = 0;
-    int tiempo1,tiempo2,tiempo3,tiempo4,tiempo5,tiempo6 = 0;
+    int tiempo = 0;
     int tp1,tp2,tp3,tp4,tp5,tp6 = 0;
     private int x = 0;
+    //fila
     List<String> fila = new ArrayList<>(); 
+    //listas prioridad
+    
+    //listas cajas
     LinkedList caja1 = new LinkedList();
     LinkedList caja2 = new LinkedList();
     LinkedList caja3 = new LinkedList();
@@ -36,13 +40,40 @@ public class logica {
         return tiquetes;
     }
     //
-    public void llenarFila(){
-        fila.add(tiquetes());
-        
+    public int tiempos(){
+        int tiempos = 0;
+        while((tiempos != 30) && (tiempos != 5)){
+             tiempos = ((int) (Math.random()*31+4));
+        } 
+        return tiempos;
     }
     //
-    public void centro(){                         
-         
+    public void llenarFila(){
+        if(fila.size() < 25){
+        fila.add(tiquetes() + tiempos());
+        }
+    }
+    //
+    public void centro(){ 
+        tiempo = tiempos();
+        contador += tiempo;
+         llenarFila();
+         if(!"E".equals(fila.get(0))){
+             this.caja1(fila, tiempo);
+         }
+         if(!"E".equals(fila.get(0))){
+             this.caja1(fila, tiempo);
+         }if(!"E".equals(fila.get(0))){
+             this.caja2(fila, tiempo);
+         }if(!"E".equals(fila.get(0))){
+             this.caja3(fila, tiempo);
+         }if(!"E".equals(fila.get(0))){
+             this.caja4(fila, tiempo);
+         }if(!"E".equals(fila.get(0))){
+             this.caja5(fila, tiempo);
+         }else{
+             this.plataforma(fila, tiempo);
+         }
     }
     //
     public int totalP(){
@@ -57,11 +88,11 @@ public class logica {
         return totalAt;
     }
     //
-    public int tiempos(){
-        int tiempos = 0;      
-        tiempos = ((int) (Math.random()*25+4));        
-        return tiempos;
-    }
+//    public int tiempos(){
+//        int tiempos = 0;      
+//        tiempos = ((int) (Math.random()*25+4));        
+//        return tiempos;
+//    }
      //
     public void caja1(List fila, int tiempo){             
         cajas.caja_1 c1 = new cajas.caja_1(0);

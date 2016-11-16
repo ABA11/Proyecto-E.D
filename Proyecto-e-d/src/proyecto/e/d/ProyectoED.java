@@ -19,6 +19,12 @@ public class ProyectoED {
 //        menu m = new menu();
 //        m.principal();
        logica lg = new logica();
-     
+        for (int i = 0; i < 10; i++) {
+           lg.llenarFila(); 
+        }
+       
+       System.out.println(lg.plataforma);
+        System.out.println(lg.caja1);
+         System.out.println(lg.caja2);
     }
 }
