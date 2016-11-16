@@ -13,9 +13,11 @@ import java.util.List;
 /**
  *
  * @author Andrey B
- **/
+ */
 public class logica {
     private String[] prioridad = {"A","B","C","D","E","F"};
+    private static int a,b,c,d,e,f;
+    private int[] ntiquetes = {a,b,c,d,e,f};   
     private int contador = 0;
     int tiempo1,tiempo2,tiempo3,tiempo4,tiempo5,tiempo6 = 0;
     int tp1,tp2,tp3,tp4,tp5,tp6 = 0;
@@ -28,10 +30,19 @@ public class logica {
     LinkedList caja5 = new LinkedList();
     LinkedList plataforma = new LinkedList();
     //
-    public void tiquetes(){               
+    public String tiquetes(){            
+        x = (int) (Math.random()*6);
+        String tiquetes = (prioridad[x]) + (ntiquetes[x]++) ; 
+        return tiquetes;
     }
     //
-    public void centro(int time){  
+    public void llenarFila(){
+        fila.add(tiquetes());
+        
+    }
+    //
+    public void centro(){                         
+         
     }
     //
     public int totalP(){

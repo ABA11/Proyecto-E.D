@@ -4,11 +4,13 @@
  * and open the template in the editor.
  */
 package proyecto.e.d;
+
 /**
  *
  * @author Andrey B
  **/
 public class ProyectoED {
+
     /**
      * @param args the command line arguments
      **/
@@ -16,7 +18,7 @@ public class ProyectoED {
         // TODO code application logic here
 //        menu m = new menu();
 //        m.principal();
-        logica lg = new logica();
-        lg.tiquetes();
+       logica lg = new logica();
+     
     }
 }
