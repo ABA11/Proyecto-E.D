@@ -12,7 +12,7 @@ import java.util.List;
 /**
  *
  * @author Jeycon
- */
+ **/
 public abstract class  cajaMadre {
     public int tiempo;
 //
@@ -28,7 +28,5 @@ public abstract class  cajaMadre {
         this.tiempo = tiempo;
     }
 //
-    public abstract String Caja (String tiquete, int tiempo);
-        
-        
+    public abstract String Caja (String tiquete, int tiempo);     
 }

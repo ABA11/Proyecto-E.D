@@ -13,7 +13,7 @@ import java.util.List;
 /**
  *
  * @author Andrey B
- */
+ **/
 public class logica {
     private String[] prioridad = {"A","B","C","D","E","F"};
     private int contador = 0;
@@ -28,38 +28,10 @@ public class logica {
     LinkedList caja5 = new LinkedList();
     LinkedList plataforma = new LinkedList();
     //
-    public String tiquetes(){            
-        x = (int) (Math.random()*6);
-        String tiquetes = prioridad[x] ;      
-        return tiquetes;
+    public void tiquetes(){               
     }
     //
-    public void puta(int time){                   
-        while(fila.size() < 25 && contador < time){
-            tp1 += (tiempo1 = tiempos());
-            tp2 += (tiempo2 = tiempos());
-            tp3 += (tiempo3 = tiempos());
-            tp4 += (tiempo4 = tiempos());
-            tp5 += (tiempo5 = tiempos());
-            tp6 += (tiempo6 = tiempos());
-            contador += tiempo1 + tiempo2 + tiempo3 + tiempo4 + tiempo5 +tiempo6;
-            for (int i = 0; fila.size() < 25; i++) {
-                fila.add(tiquetes());
-            }
-            if(!"F".equals(fila.get(0))){
-                this.caja1(fila,tiempo1);
-            }if(!"F".equals(fila.get(0))){
-                this.caja2(fila,tiempo2);
-            }if(!"F".equals(fila.get(0))){
-                this.caja3(fila,tiempo3);
-            }if(!"F".equals(fila.get(0))){
-                this.caja4(fila,tiempo4);
-           }if(!"F".equals(fila.get(0))){
-                this.caja5(fila,tiempo5);
-           }else{
-               this.plataforma(fila,tiempo6);
-           }
-        }
+    public void centro(int time){  
     }
     //
     public int totalP(){

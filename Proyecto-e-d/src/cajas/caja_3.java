@@ -4,19 +4,17 @@
  * and open the template in the editor.
  */
 package cajas;
-
+//Importes
 import java.util.LinkedList;
-
 /**
  *
  * @author Jeycon
- */
+ **/
 public class caja_3 extends cajaMadre{
 
     public caja_3(int tiempo) {
         super(tiempo);
     }
-
     @Override
     public String Caja(String tiquete, int tiempo) {
         this.tiempo = tiempo;
