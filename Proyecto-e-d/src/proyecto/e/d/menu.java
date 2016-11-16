@@ -26,11 +26,11 @@ public class menu {
         switch(menu){
             case 1:
                 time = 480*6;
-                lg.puta(time);             
+                lg.centro();             
               
             case 2:
                 time = 240*6;
-                lg.puta(time);
+                ();
         }
         System.out.println("La cantidad de clientes que entraron al banco "
                 + "fue de: "+ lg.totalP());
