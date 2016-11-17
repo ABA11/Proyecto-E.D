@@ -40,6 +40,7 @@ public class logica {
         return tiquetes;
     }
     //
+<<<<<<< HEAD
     public int tiempos(){
         int tiempos = 0;
         while((tiempos != 30) && (tiempos != 5)){
@@ -93,6 +94,43 @@ public class logica {
 //        tiempos = ((int) (Math.random()*25+4));        
 //        return tiempos;
 //    }
+=======
+    public void puta(){                   
+        while(fila.size() < 25 && contador < 200){
+            tp1 += (tiempo1 = tiempos());
+            tp2 += (tiempo2 = tiempos());
+            tp3 += (tiempo3 = tiempos());
+            tp4 += (tiempo4 = tiempos());
+            tp5 += (tiempo5 = tiempos());
+            tp6 += (tiempo6 = tiempos());
+            contador += tiempo1 + tiempo2 + tiempo3 + tiempo4 + tiempo5 +tiempo6;
+            for (int i = 0; fila.size() < 25; i++) {
+                fila.add(tiquetes());
+            }
+            if(!"F".equals(fila.get(0))){
+                this.caja1(fila,tiempo1);
+            }if(!"F".equals(fila.get(0))){
+                this.caja2(fila,tiempo2);
+            }if(!"F".equals(fila.get(0))){
+                this.caja3(fila,tiempo3);
+            }if(!"F".equals(fila.get(0))){
+                this.caja4(fila,tiempo4);
+           }if(!"F".equals(fila.get(0))){
+                this.caja5(fila,tiempo5);
+           }else{
+               this.plataforma(fila,tiempo6);
+           }
+        }
+    }
+    //
+    public int tiempos(){
+        int tiempos = 0;
+        while((tiempos != 30) && (tiempos != 5)){
+             tiempos = ((int) (Math.random()*31+4));
+        } 
+        return tiempos;
+    }
+>>>>>>> parent of 8846636... Proyecto ED
      //
     public void caja1(List fila, int tiempo){             
         cajas.caja_1 c1 = new cajas.caja_1(0);

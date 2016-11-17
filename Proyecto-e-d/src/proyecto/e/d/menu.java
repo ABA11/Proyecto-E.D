@@ -4,15 +4,12 @@
  * and open the template in the editor.
  */
 package proyecto.e.d;
-
-import java.util.List;
-import javax.swing.JOptionPane;
-
 /**
  *
  * @author Andrey B
  */
 public class menu {
+<<<<<<< HEAD
     int menu = 0;
     int menu1 = 0;
     int time = 0;
@@ -69,3 +66,6 @@ public class menu {
         } 
     }
 }
+=======
+}
+>>>>>>> parent of 8846636... Proyecto ED
