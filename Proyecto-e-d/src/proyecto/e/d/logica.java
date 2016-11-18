@@ -4,12 +4,11 @@
  * and open the template in the editor.
  */
 package proyecto.e.d;
-
+//Importes
 import static java.lang.String.valueOf;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
-
 /**
  *
  * @author Andrey B
@@ -19,12 +18,12 @@ public class logica {
     private static int a,b,c,d,e,f;
     private int[] ntiquetes = {a,b,c,d,e,f};   
     private int contador = 0;
-    int tiempo = 0;
+    private int tiempo = 0;
+    private int tiempo1,tiempo2,tiempo3,tiempo4,tiempo5,tiempo6;
     int tp1,tp2,tp3,tp4,tp5,tp6 = 0;
     private int x = 0;
     //fila
     List<String> fila = new ArrayList<>(); 
-    //listas prioridad
     
     //listas cajas
     LinkedList caja1 = new LinkedList();
@@ -36,45 +35,16 @@ public class logica {
     //
     public String tiquetes(){            
         x = (int) (Math.random()*6);
-        String tiquetes = (prioridad[x]) + (ntiquetes[x]++) ; 
+        String tiquetes = ((prioridad[x]) + (ntiquetes[x]++)+ " ") ; 
         return tiquetes;
     }
     //
-<<<<<<< HEAD
     public int tiempos(){
         int tiempos = 0;
         while((tiempos != 30) && (tiempos != 5)){
              tiempos = ((int) (Math.random()*31+4));
         } 
         return tiempos;
-    }
-    //
-    public void llenarFila(){
-        if(fila.size() < 25){
-        fila.add(tiquetes() + tiempos());
-        }
-    }
-    //
-    public void centro(){ 
-        tiempo = tiempos();
-        contador += tiempo;
-         llenarFila();
-         if(!"E".equals(fila.get(0))){
-             this.caja1(fila, tiempo);
-         }
-         if(!"E".equals(fila.get(0))){
-             this.caja1(fila, tiempo);
-         }if(!"E".equals(fila.get(0))){
-             this.caja2(fila, tiempo);
-         }if(!"E".equals(fila.get(0))){
-             this.caja3(fila, tiempo);
-         }if(!"E".equals(fila.get(0))){
-             this.caja4(fila, tiempo);
-         }if(!"E".equals(fila.get(0))){
-             this.caja5(fila, tiempo);
-         }else{
-             this.plataforma(fila, tiempo);
-         }
     }
     //
     public int totalP(){
@@ -88,15 +58,8 @@ public class logica {
                 +caja5.size() + plataforma.size();
         return totalAt;
     }
-    //
-//    public int tiempos(){
-//        int tiempos = 0;      
-//        tiempos = ((int) (Math.random()*25+4));        
-//        return tiempos;
-//    }
-=======
-    public void puta(){                   
-        while(fila.size() < 25 && contador < 200){
+    public void centro(int time){                   
+        while(fila.size() < 25 && contador < time){
             tp1 += (tiempo1 = tiempos());
             tp2 += (tiempo2 = tiempos());
             tp3 += (tiempo3 = tiempos());
@@ -107,36 +70,26 @@ public class logica {
             for (int i = 0; fila.size() < 25; i++) {
                 fila.add(tiquetes());
             }
-            if(!"F".equals(fila.get(0))){
+            if(!"E".equals(fila.get(0))){
                 this.caja1(fila,tiempo1);
-            }if(!"F".equals(fila.get(0))){
+            }if(!"E".equals(fila.get(0))){
                 this.caja2(fila,tiempo2);
-            }if(!"F".equals(fila.get(0))){
+            }if(!"E".equals(fila.get(0))){
                 this.caja3(fila,tiempo3);
-            }if(!"F".equals(fila.get(0))){
+            }if(!"E".equals(fila.get(0))){
                 this.caja4(fila,tiempo4);
-           }if(!"F".equals(fila.get(0))){
+           }if(!"E".equals(fila.get(0))){
                 this.caja5(fila,tiempo5);
            }else{
                this.plataforma(fila,tiempo6);
            }
         }
     }
-    //
-    public int tiempos(){
-        int tiempos = 0;
-        while((tiempos != 30) && (tiempos != 5)){
-             tiempos = ((int) (Math.random()*31+4));
-        } 
-        return tiempos;
-    }
->>>>>>> parent of 8846636... Proyecto ED
      //
     public void caja1(List fila, int tiempo){             
         cajas.caja_1 c1 = new cajas.caja_1(0);
         caja1.add(c1.Caja(valueOf(fila.get(0)),tiempo));
         fila.remove(0);
-        
     }
     public void caja2(List fila, int tiempo){
         cajas.caja_2 c2 = new cajas.caja_2(0);    

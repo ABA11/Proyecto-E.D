@@ -16,18 +16,7 @@ public class ProyectoED {
      **/
     public static void main(String[] args) {
         // TODO code application logic here
-<<<<<<< HEAD
-//        menu m = new menu();
-//        m.principal();
-       logica lg = new logica();
-        for (int i = 0; i < 10; i++) {
-           lg.llenarFila(); 
-        }
-       
-       System.out.println(lg.plataforma);
-        System.out.println(lg.caja1);
-         System.out.println(lg.caja2);
-=======
->>>>>>> parent of 8846636... Proyecto ED
+       menu m = new menu();
+       m.principal();
     }
 }
