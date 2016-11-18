@@ -24,7 +24,6 @@ public class logica {
     private int x = 0;
     //fila
     List<String> fila = new ArrayList<>(); 
-    
     //listas cajas
     LinkedList caja1 = new LinkedList();
     LinkedList caja2 = new LinkedList();

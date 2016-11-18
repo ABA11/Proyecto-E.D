@@ -4,13 +4,11 @@
  * and open the template in the editor.
  */
 package proyecto.e.d;
-
 /**
  *
  * @author Andrey B
  **/
 public class ProyectoED {
-
     /**
      * @param args the command line arguments
      **/
