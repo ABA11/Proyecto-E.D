@@ -30,16 +30,17 @@ public class menu {
                 + "\n1 = 8 horas \n2 = 4 horas"));
         switch(menu){
             case 1:{
-                time = 480*6;
+                time = 580*6;
                 lg.centro(time);             
             }
             case 2:{
-                time = 240*6;
+                time = 340*6;
                 lg.centro(time);
             }    
         }
                 boolean empezar = true;
         while(empezar==true){
+            System.out.println("=================================================");
         System.out.println("La cantidad de clientes que entraron al banco "
                 + "fue de: "+ lg.totalP());
         System.out.println("Cantidad de clientes atendidos: "+lg.totalAt());
@@ -52,6 +53,7 @@ public class menu {
         //
         switch(menu1){
             case 1:{
+                System.out.println(lg.caja1);
                 System.out.println("Cantidad  de clientes atendidos por "
                         +"caja 1: "+lg.caja1.size());
                 System.out.println("Tiempo promedio por cliente: "
@@ -82,6 +84,7 @@ public class menu {
                         +(lg.tp5/lg.caja5.size())+" Minutos");
             }break;    
             case 6:{
+                System.out.println(lg.plataforma);
                 System.out.println("Cantidad  de clientes atendidos por "
                         +"Plataforma: "+lg.plataforma.size());
                 System.out.println("Tiempo promedio por cliente: "
