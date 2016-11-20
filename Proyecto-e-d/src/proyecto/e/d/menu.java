@@ -55,38 +55,39 @@ public class menu {
             case 1:{
                 System.out.println(lg.caja1);
                 System.out.println("Cantidad  de clientes atendidos por "
-                        +"caja 1: "+lg.caja1.size());
+                        +"caja 1: "+lg.caja1.size()+" "+lg.caja1);
                 System.out.println("Tiempo promedio por cliente: "
                         +(lg.tp1/lg.caja1.size())+" Minutos");
             }break;
             case 2:{
                 System.out.println("Cantidad  de clientes atendidos por "
-                        +"caja 2: "+lg.caja2.size());
+                        +"caja 2: "+lg.caja2.size()+" "+lg.caja2);
                 System.out.println("Tiempo promedio por cliente: "
                         +(lg.tp2/lg.caja2.size())+" Minutos");
             }break;    
             case 3:{
                 System.out.println("Cantidad  de clientes atendidos por "
-                        +"caja 3: "+lg.caja3.size());
+                        +"caja 3: "+lg.caja3.size()+" "+lg.caja3);
                 System.out.println("Tiempo promedio por cliente: "
                         +(lg.tp3/lg.caja3.size())+" Minutos");
             }break;
             case 4:{
                 System.out.println("Cantidad  de clientes atendidos por "
-                        +"caja 4: "+lg.caja4.size());
+                        +"caja 4: "+lg.caja4.size()+" "+lg.caja4);
                 System.out.println("Tiempo promedio por cliente: "
                         +(lg.tp4/lg.caja4.size())+" Minutos");
             }break;    
             case 5:{
                 System.out.println("Cantidad  de clientes atendidos por "
-                        +"caja 5: "+lg.caja5.size());
+                        +"caja 5: "+lg.caja5.size()+" "+lg.caja5);
                 System.out.println("Tiempo promedio por cliente: "
                         +(lg.tp5/lg.caja5.size())+" Minutos");
             }break;    
             case 6:{
                 System.out.println(lg.plataforma);
                 System.out.println("Cantidad  de clientes atendidos por "
-                        +"Plataforma: "+lg.plataforma.size());
+                        +"Plataforma: "+lg.plataforma.size()+" "+lg.plataforma
+                );
                 System.out.println("Tiempo promedio por cliente: "
                         +(lg.tp6/lg.plataforma.size())+" Minutos");
            }break;
