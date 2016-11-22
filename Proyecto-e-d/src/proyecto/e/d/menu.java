@@ -24,6 +24,7 @@ public class menu {
         boolean comenzar = true;
 //        boolean empezar = true;
         while(comenzar==true){
+        try{    
         logica lg = new logica();
         this.menu = Integer.parseInt(JOptionPane.showInputDialog("Elija una de "
                 + "las opciones\npara definir cuantas horas trabajara el banco"
@@ -32,15 +33,19 @@ public class menu {
             case 1:{
                 time = 580*6;
                 lg.centro(time);             
-            }
+            }break;
             case 2:{
                 time = 340*6;
                 lg.centro(time);
-            }    
-        }
-                boolean empezar = true;
+            }break;
+            default:{
+                JOptionPane.showMessageDialog(null,"¡ERROR!","Error"
+                        ,JOptionPane.ERROR_MESSAGE);
+            }break;
+        }    
+        boolean empezar = true;
         while(empezar==true){
-            System.out.println("=================================================");
+        System.out.println("=================================================");
         System.out.println("La cantidad de clientes que entraron al banco "
                 + "fue de: "+ lg.totalP());
         System.out.println("Cantidad de clientes atendidos: "+lg.totalAt());
@@ -91,6 +96,10 @@ public class menu {
                 System.out.println("Tiempo promedio por cliente: "
                         +(lg.tp6/lg.plataforma.size())+" Minutos");
            }break;
+            default:{
+                JOptionPane.showMessageDialog(null,"¡ERROR!","Error"
+                        ,JOptionPane.ERROR_MESSAGE);
+            }break;
         }
         int reini = JOptionPane.showConfirmDialog(null,
                  "¿Quieres volver a consultar otra caja?");//Opcion que se presenta y pregunta que si desea jugar otra ves
@@ -105,8 +114,14 @@ public class menu {
              if(reiniciar==JOptionPane.YES_OPTION){
                  comenzar = true;
              }else
-             if(reiniciar==JOptionPane.NO_OPTION)    
+             if(reiniciar==JOptionPane.NO_OPTION)
                  comenzar = false;
-        }
+             if(reiniciar==JOptionPane.CANCEL_OPTION)
+                 comenzar = false;
+        }catch(Exception e){ //catch para tratar los posibles errores que pueda tener el proyecto
+                JOptionPane.showMessageDialog(null,"¡ERROR!","Error"
+                        ,JOptionPane.ERROR_MESSAGE);
+        }           
     }
+  }
 }
