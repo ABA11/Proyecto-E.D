@@ -5,7 +5,6 @@
  */
 package cajas;
 //Importes
-import java.util.LinkedList;
 /**
  *
  * @author Jeycon

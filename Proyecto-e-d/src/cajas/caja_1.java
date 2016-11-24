@@ -4,8 +4,6 @@
  * and open the template in the editor.
  */
 package cajas;
-//Importes
-import java.util.LinkedList;
 /**
  *
  * @author Jeycon

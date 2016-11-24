@@ -4,11 +4,6 @@
  * and open the template in the editor.
  */
 package cajas;
-
-import static java.lang.String.valueOf;
-import java.util.LinkedList;
-import java.util.List;
-
 /**
  *
  * @author Jeycon
