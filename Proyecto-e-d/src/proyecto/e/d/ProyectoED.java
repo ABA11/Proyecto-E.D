@@ -7,6 +7,7 @@ package proyecto.e.d;
 /**
  *
  * @author Andrey B
+ * @author Jeycon
  **/
 public class ProyectoED {
     /**
@@ -14,7 +15,7 @@ public class ProyectoED {
      **/
     public static void main(String[] args) {
         // TODO code application logic here
-       menu m = new menu();
-       m.principal();
+       menu m = new menu();//Instancia de clase menú
+       m.principal();//Instancia del método principal
     }
 }
